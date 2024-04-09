@@ -4,13 +4,13 @@ Tags: indieweb, interaction, posts, webmention, share, like, scrobble
 Stable tag: 3.7.2
 Requires at least: 4.9.9
 Requires PHP: 7.0
-Tested up to: 6.4
+Tested up to: 6.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Ever want to reply to someone else's post with a post on your own site? Or to "like" someone else's post, but with your own site?
 
-== Description == 
+== Description ==
 
 Post Kinds adds support to the Classic Editor for responding to and interacting with other sites using the standards
 developed by the IndieWeb by implementing [kinds of posts](http://indieweb.org/post_kinds). It is not compatible with Gutenberg.
@@ -42,13 +42,13 @@ responsibilities to responsibly use this data, and to remove information on requ
 
 == Upgrade Notice ==
 
-= 3.7.0 = 
+= 3.7.0 =
 
 This version introduces review posts, but they use an experimental review-of property as a h-entry, not an h-review.
 
 = 3.6.0 =
 
-This version introduces the ability to filter kinds from the main feed and introduces a second feed that has all kinds, called the 'firehose' feed, available by default at /firehose. 
+This version introduces the ability to filter kinds from the main feed and introduces a second feed that has all kinds, called the 'firehose' feed, available by default at /firehose.
 This feature could have unanticipated interactions with other plugins. Please report any issues so they can be addressed.
 
 = 3.5.0 =
@@ -69,17 +69,17 @@ This version is compatible with 5.0 of WordPress but is not integrated with the 
 = 3.1.0 =
 
 * Custom post kind registration, previously done by filter, is now done by registration. This will cause issues who had been using the filter. Due to a particular
-user who created many custom kinds, decided to create a better way to do this. 
+user who created many custom kinds, decided to create a better way to do this.
 * Posting capability via custom REST API endpoint has been removed due improved Micropub support
 * Kind_Meta class deprecated as promiseda
 * Media Data is no longer stored in the post instead being stored in the attachment
 * This version introduces a lot of base changes. Before making additional ones will be releasing this version so that things can stabilize
 
-= 3.0.0 = 
+= 3.0.0 =
 
 Major refactoring of the plugin. The interface has been completely changed to improve simplicity. Please submit all bugs to our Github page.
 
-= 2.7.0 = 
+= 2.7.0 =
 
 Storage locations have now changed as part of the nested properties settings and things should migrate automatically but pleasse backup before upgrade.
 Kind_Meta function is deprecated and will be removed in 2.8.0, so if you depend on this, please update to use MF2_Post
@@ -90,17 +90,17 @@ Settings have been completely changed and you will have to reset.
 
 = 2.4.2 =
 
-Due to changes in the Micropub plugin, multiple values for properties are now supported. 
+Due to changes in the Micropub plugin, multiple values for properties are now supported.
 Until this feature is supported in this plugin it will only look at the first value and ignore the others.
 
-= 2.4.0 = 
+= 2.4.0 =
 
 I have changed the icons again, to go back to something closer to the original. If anyone wants to
 contribute alternate icon sets for the project, willing to consider adding them. Also, coming up is
 another change to how the plugin stores and works with data to continue to move toward something
 closer to Microformats. Looking at a JF2 representation.
 
-= 2.0.0 = 
+= 2.0.0 =
 
 This version makes some changes to the presentation. Backup your installation
 first as a precaution. Lots of changes under the hood which will bear fruit in future.
@@ -111,12 +111,12 @@ first as a precaution.
 
 == Frequently Asked Questions ==
 
-= How does it work? = 
+= How does it work? =
 
 Kinds, like Post Formats built into WordPress, allow you to specify that a post contains a certain type of content. It also, based
 on you classifying it that way, displays it appropriately and marks it up accordingly so outside sites can identify it. Kinds are
-either a response to something, such as a URL, or a more passive type of post where you are recording/logging something you did, for 
-example, watched a movie. 
+either a response to something, such as a URL, or a more passive type of post where you are recording/logging something you did, for
+example, watched a movie.
 
 = How do I interact with other sites? =
 
@@ -135,7 +135,7 @@ WordPress](http://indieweb.org/Getting_Started_on_WordPress).
 
 = There are too many Post Kinds =
 
-You can enable/disable more based on preference. Some may be enabled by plugins. You do not have to use ones you don't want. Not having a post kind enabled 
+You can enable/disable more based on preference. Some may be enabled by plugins. You do not have to use ones you don't want. Not having a post kind enabled
 will not disable the functionality on existing posts, it only hides the selection in adding new posts.
 
 = What are the kinds of posts I can make? =
@@ -154,7 +154,7 @@ The Response Kinds
  * **Repost** - a complete repost of someone else's content
  * **Like** -  props/compliments to the original post/poster
  * **Favorite** - special to the favoriter
- * **Bookmark** - This is basically sharing/storing a link/bookmark. 
+ * **Bookmark** - This is basically sharing/storing a link/bookmark.
  * **Quote** - Quoted Content
  * **RSVP** - A specific type of Reply regarding an event
  * **Check-In** - Identifying you are at a place. To show full location, the Simple Location plugin is recommended as it will display maps.
@@ -168,7 +168,7 @@ To "Scrobble" a song is when listening to it, you would make it a post on
 your website. This is the most well-known example of a passive kind of post. They are formed by having content in the context box on one of these types of
 posts.
 
- * **Listen** - scrobble - listening to an audio post 
+ * **Listen** - scrobble - listening to an audio post
  * **Jam** - Indicating a particularly personally meaningful song
  * **Watch** - video - watching a video
  * **Play** - playing a game
@@ -179,11 +179,11 @@ posts.
 
 = What kinds do you plan to add in the future? =
 
-The following Kinds are reserved for future use but will not show up in the 
+The following Kinds are reserved for future use but will not show up in the
 interface at this time.
 
  * **Wish** - a post indicating a desire/wish. The archive of which would be
-  a wishlist, such as a gift registry or similar. 
+  a wishlist, such as a gift registry or similar.
  * **Weather** - A weather post would be current weather conditions
  * **Exercise** - Representing some form of physical activity
  * **Trip** - Representing a trip...this represents a geographic journey and would require location awareness.
@@ -197,7 +197,7 @@ interface at this time.
  * **Acquisition** - Purchased, Donated, or otherwise acquired an object
  * **Question** - Question is a post type for soliciting answer replies, which are then typically up/down voted by others and then displayed underneath the question post ordered by highest positive vote count rather than time ordered.
 
-= Can I add my own kinds? = 
+= Can I add my own kinds? =
 
 I would prefer if something is popular enough to merge it into the plugin. Feel free to ask for a term to be reserved by filing an issue.
 However if you are interested in creating your own there is functionality around it.
@@ -218,7 +218,7 @@ register_post_kind(
 		)
 );
 
-Add a function with your kind in the above format, hooking it in the init hook and it will add the Kind to the system. 
+Add a function with your kind in the above format, hooking it in the init hook and it will add the Kind to the system.
 
 = Can I enable one of the Kinds you plan to offer in future? =
 
@@ -226,17 +226,17 @@ Add a function with your kind in the above format, hooking it in the init hook a
 
 = Can I create archives for each kind? ==
 
-Post Kinds automatically handles the display of archives of individual types. So to view all the posts marked as "note", for example, one could visit the URL http://www.YOURSITE.COM/kind/note/. 
+Post Kinds automatically handles the display of archives of individual types. So to view all the posts marked as "note", for example, one could visit the URL http://www.YOURSITE.COM/kind/note/.
 Simply replace YOURSITE.COM with your particular site name and the particular post kind name to access the others.
 
-You can also add the date /kind/note/2018/12/24 to see date-based archives. 
+You can also add the date /kind/note/2018/12/24 to see date-based archives.
 
 For archives if you add exclude_kind as a query variable it will exclude specific kinds from the query `?exclude=kind&exclude_terms=note`. You can also do this as /exclude/kind/note,checkin as it accepts multiple values
 
 There is also a special photo photo included, using ?kind_photos=1 or /photos or /photos/yyyy or /photos/yyyy/mm or /photos/kind/note or any other taxonomy. This will use the photo enhancements introduced in 3.4.0 to only show photos from
 all types of posts.
 
-= Do you have RSS feeds for each kind? = 
+= Do you have RSS feeds for each kind? =
 
 Post Kinds also automatically handles RSS feeds which can be made available or subscribed to for any of the particular kinds. The RSS feed for all the posts marked as "note", for example could be found at either the URL `http://www.example.com/kind/note/feed` or  `http://www.example.com/feed/?kind=note` (if one doesn't have pretty permalinks enabled). Others can be obtained by replacing "note" with the other kinds.
 
@@ -262,7 +262,7 @@ The JetPack sharing module conflicts with this plugin.
 I am not sure. It is not a strict priority. At this time, there is no definite time for this support. I have been gradually moving toward abstracting more of the data into the REST API
 so it could more easily be added to the block editor.
 
-= How do I get support? = 
+= How do I get support? =
 
 The Development version of the plugin is hosted at [Github](https://github.com/dshanske/indieweb-post-kinds). You can file issues there.
 
@@ -280,6 +280,10 @@ through future plugin updates.
 
 
 == Changelog ==
+
+* 3.7.3 ( 2024-04-09 ) =
+* Ensure widget array is instantiated
+
 
 = 3.7.2 ( 2023-12-25 ) =
 * Fix markup on kind_get_the_link function to allow for classes for date for overall link
@@ -365,7 +369,7 @@ through future plugin updates.
 = 3.4.19 ( 2021-02-22 ) =
 * Improve output of On This Day Widget.
 * Flush Rewrite rules on Plugin Upgrade.
-* Add 'food' as alias for eat,drink. Example /kind/food 
+* Add 'food' as alias for eat,drink. Example /kind/food
 * Add 'reaction' as alias for bookmark,repost,like,favorite
 * Add 'media' as alias for watch,listen,play,read posts.
 
@@ -376,26 +380,26 @@ through future plugin updates.
 = 3.4.17 ( 2021-01-22 ) =
 * Fix reversion issue with photos not being picked up.
 * Add check for VR/360 shortcodes
-* Mix on this day and photo template to show On This Day photo template 
+* Mix on this day and photo template to show On This Day photo template
 
 = 3.4.16 ( 2021-01-19 ) =
 * Fix issue with photos overrunning boundary
 * Fix issue where photos were not picked up on certain kinds of posts
-* Minor structural issues. 
+* Minor structural issues.
 
 = 3.4.15 ( 2021-01-16 ) =
-* Rewrite existing rewrites. 
+* Rewrite existing rewrites.
 * Allow the `onthisday` and `photos` slug to be customized
 
 = 3.4.14 ( 2021-01-13 ) =
 * Fix CSS issue for On This Day widget
 * Update checkin view to use Kind_Post function to retrieve photos
 * Look for galleries as part of photo posts
-* Add /photos rewrite to show all posts that have photos in them. 
+* Add /photos rewrite to show all posts that have photos in them.
 * Fix issues with empty urls displaying.
 * Fix issue with start and end date saving caused by previous changes.
 * Do not show domain for publication when it is the same as the website.
- 
+
 = 3.4.13 ( 2020-12-25 ) =
 * Add On This Day Widget
 * Add /onthisday for the current day
@@ -486,7 +490,7 @@ through future plugin updates.
 * Set title tag from title generate function if empty
 
 = 3.3.2 ( 2019-08-03 ) =
-* Improved logic around no Block Editor support - thanks @tw2113 
+* Improved logic around no Block Editor support - thanks @tw2113
 * Fix Settings Link in Plugin page - thanks @glueckpress
 * Update admin notice text for clarity - thanks @glueckpress
 * Fix issue with atom feed
@@ -551,7 +555,7 @@ through future plugin updates.
 * Fix issue with Micropub posting caused by this plugin
 
 = 3.1.7 ( 2019-01-05 ) =
-* Fix issue with new tag rewrite overwriting feed by changing tag kind archive to /kind/????/tag/????? 
+* Fix issue with new tag rewrite overwriting feed by changing tag kind archive to /kind/????/tag/?????
 
 = 3.1.6 ( 2018-12-31) =
 * Fix Micropub bug introduced by Parse This change.
@@ -601,7 +605,7 @@ through future plugin updates.
 * For new posts citations should now be stored in compliant mf2 h-cites and will be refreshed on update of old posts.
 * Delete old property when changing kind
 * Finding photos, audio, and video is now in the MF2_Post class and the views are updated accordingly
-* An instance of the MF2_Post class($mf2_post), the kind($kind), the mf2 property associated with that kind($type), as well as initializing $embed and $url are available to all views 
+* An instance of the MF2_Post class($mf2_post), the kind($kind), the mf2 property associated with that kind($type), as well as initializing $embed and $url are available to all views
 rather than having them instantiate them individually. This means some overhead.
 * The MF2_Post class now caches the generated data in the event it is requested multiple times in a pageload.
 * The MF2 post class now checks the photo property only for remote URLs and sideloads them.
@@ -685,7 +689,7 @@ rather than having them instantiate them individually. This means some overhead.
 * Multi-author data no longer dropped but not fully supported
 
 = 2.7.4 ( 2017-12-09 ) =
-* Check for missing properties in all templates which should only happen if improperly filled 
+* Check for missing properties in all templates which should only happen if improperly filled
 * Switch entirely to icons from the new Font Awesome 5 release
 * Bugfixes
 = 2.7.3 ( 2017-12-03 ) =
@@ -725,7 +729,7 @@ rather than having them instantiate them individually. This means some overhead.
 * Add filter to disable icon or text
 * Add new PHP requirement option to header
 * Update Travis CI due changes
-= 2.6.4 = 
+= 2.6.4 =
 * Enhance kind detection ( props @Ruxton )
 = 2.6.3 =
 * Hide KSES option behind POST_KINDS_KSES flag as it confused new users. (Sorry @acegiak)
@@ -787,10 +791,10 @@ In interim plugin will ignore multiple values and only use the first.
 * Fix text domain
 * Compatibility check for 4.6
 * Change default to article from note, per commentary.
-= 2.4.1 = 
+= 2.4.1 =
 * Fix error where Twitter shim is not loaded if other version of MF2 Parser is loaded
 * Reserve Recipe per Request
-* Removed the word travel and replaced with trip and itinerary...(idea from @aaronpk). 
+* Removed the word travel and replaced with trip and itinerary...(idea from @aaronpk).
 = 2.4.0 =
 * Refactor to initialize classes in new plugin loading class
 * Remove additional global functions
@@ -804,17 +808,17 @@ In interim plugin will ignore multiple values and only use the first.
 * Remove auto-set function for kind if not post type post
 * Move global functions to the class in which they were used
 * Refine MF2 parser check to hide retrieve button if version is less than 5.3
-= 2.3.6 = 
+= 2.3.6 =
 * Manually fix Parser which in latest version has one line that breaks compatibility with PHP 5.3
 * Disable MF2 Parser usage if version lower than 5.3
-= 2.3.5 = 
+= 2.3.5 =
 * Remove comment transition action in favor of proposing it be moved into webmentions plugin
 * Replace send webmentions code with a hook
 * Add PHP docblocks to php-mf-cleaner
 * Update to latest version of MF2 Parser
 * Theme Compatibility CSS separated from Basic CSS and Admin CSS again
 * Remove helper functions no longer used
-= 2.3.4 = 
+= 2.3.4 =
 * The CSS included with Post Kinds hides entry-title by default where applicable for non-aware themes.
 * Attempted to fix reported issue with wrong URL being sent webmention
 * Fix error with emoji decode test backcompat
@@ -829,14 +833,14 @@ In interim plugin will ignore multiple values and only use the first.
 * Add post_id to filter kind_response_display
 * When retrieving information on a URL, set the title to the title of the URL if no title is set
 * Add kindurl query variable to admin. If you add it to wp-admin/post-new.php with a URL then it will automatically put that URL in the URL box. For use by bookmarklets
-= 2.3.2 = 
+= 2.3.2 =
 * Fix rendering issues when no response
 * Add support for Indieweb Plugin
 * Special rendering for excerpts
-= 2.3.1 = 
+= 2.3.1 =
 * Changed method of retrieving svg files due server restrictions
 * Jquery Date and Time Picker now enables when HTML5 input date/time not supported
-= 2.3.0 = 
+= 2.3.0 =
 * Attempt to fix emoji issue reported by @acegiak
 * Duration to be deprecated and replaced by start date and end date. The presence of a duration field will be used over start minus end date..
 * Start/Published Date and End/Updated Date have an updated input field instead of a text string
@@ -849,13 +853,13 @@ In interim plugin will ignore multiple values and only use the first.
 * Activation of the jam post kind, previously reserved.
 * Addition of the read post kind, reflecting having read a book, as opposed to shorter content.
 * Reserving of the quote post kind, for excerpting. Will be added in future version
-= 2.2.1 = 
+= 2.2.1 =
 * Minor Tweaks and Bugfixes from changes in 2.2.0.
 * Inputs Sanitized for Your Protection
 * Summary currently shows summary of input if available. Full content is parsed if marked up with microformats, however this, like many elements, is not currently used.
 * Rewrote storage protocol for better retrieval but still in intermediate state.
 * Plan to rewrite and improve the display functionality with more templates for version 2.3.0.
-= 2.2.0 = 
+= 2.2.0 =
 * New Tabbed Metabox - More Fields are Always Desired and this new design allows for more fields to be added without overwhelming the interface
 * AJAX Enabled Retrieve Function instead of Automatic Retrieval
 * New Fields for Citation (Published, Updated, Featured Image)
@@ -867,8 +871,8 @@ In interim plugin will ignore multiple values and only use the first.
 * Webmentions are now only sent if the new status is publish
 = 2.1.1 =
 * Bugfixes from Version 2.1.0
-* Removal of Semantic Linkbacks code due upgrade in Semantic Linkbacks making it unnecessary 
-= 2.1.0 = 
+* Removal of Semantic Linkbacks code due upgrade in Semantic Linkbacks making it unnecessary
+= 2.1.0 =
 * Metadata Processing will be centralizing in the Kind_Meta class
 * Continuing to move toward WordPress Coding Standards including inline documentation
 * Fixes for the OpenGraph Parsing of Content to Fill Additional Metadata
@@ -898,86 +902,86 @@ In interim plugin will ignore multiple values and only use the first.
 * Sideloads Author Picture
 * Add Duration Meta Field by request of Acegiak. This can be used for duration of activity...for example, watching/playing/listening/exercising/etc.
 = 1.4.1 =
-* Bug fixes for changes made in 1.4.0. 
-= 1.4.0 = 
+* Bug fixes for changes made in 1.4.0.
+= 1.4.0 =
 * Begin rewrite to class-scoped functions in line with WordPress Guidelines.
 * Part of a major refinement and tightening of code
-= 1.3.1  = 
+= 1.3.1  =
 * Additional refinements to kind defaults and minor bugfixes
 = 1.3.0 =
 * Add functionality to better customize displays for different types.
-* Add default options on activation. 
-* Show/hide check-in if Simple Location plugin is enabled. 
-* Change exclude types to include types. 
+* Add default options on activation.
+* Show/hide check-in if Simple Location plugin is enabled.
+* Change exclude types to include types.
 * Add filter for plugins to show/hide kinds in the selector.
 * Reduce default to a handful of kinds for new users. The plan going forward is to have some functionality enabled by secondary plugins
-= 1.2.3 = 
-* Fix bug introduced in 1.2.2 with URL storage. 
+= 1.2.3 =
+* Fix bug introduced in 1.2.2 with URL storage.
 * Add publication as a field option
 = 1.2.2 =
-* Add option to disable KSES protection on the content box(courtesy/request of acegiak). 
+* Add option to disable KSES protection on the content box(courtesy/request of acegiak).
 * Minor cleanup
-= 1.2.1 = 
-* Add filter to support post kinds for Semantic Linkbacks plugin. 
-* Add responses to feed content. 
-= 1.2.0 = 
-* Change to store meta using [WordPress Data](https://indieweb.org/WordPress_Data) proposal. 
+= 1.2.1 =
+* Add filter to support post kinds for Semantic Linkbacks plugin.
+* Add responses to feed content.
+= 1.2.0 =
+* Change to store meta using [WordPress Data](https://indieweb.org/WordPress_Data) proposal.
 * Display functionality broken into individual pieces to make it easier to customize and edit
 * Multi-reply support in the data structure/display but not in entry
 = 1.1.1 =
 * Adds theme support and removes embed in content option
-= 1.1.0 = 
-* Added new kinds - listen, watch, check-in, play at the suggestion of acegiak. 
-* Adds support for passive kinds. 
-* Some code cleanup and commenting. 
+= 1.1.0 =
+* Added new kinds - listen, watch, check-in, play at the suggestion of acegiak.
+* Adds support for passive kinds.
+* Some code cleanup and commenting.
 * Start of add_theme_support function. This will replace the setting to embed in content in a future version.
-= 1.0.2 = 
+= 1.0.2 =
 * Bug fixes
-= 1.0.1 = 
-* Update Readme to better describe 
+= 1.0.1 =
+* Update Readme to better describe
 = 1.0 =
 * Now in the WordPress repository
-= 0.3 = 
-* Custom Code for Generating the Kind Select Box to Allow for Default Kind. 
-* Defined constant POST_KIND_EXCLUDE to hide kinds from the selector 
-= 0.24 = 
+= 0.3 =
+* Custom Code for Generating the Kind Select Box to Allow for Default Kind.
+* Defined constant POST_KIND_EXCLUDE to hide kinds from the selector
+= 0.24 =
 * Added Grunt/SASS support to more easily control changes and support internationalization
 = 0.23 =
 * Option to refresh the cache on each load added
-= 0.22 = 
+= 0.22 =
 * Complete response html cached to post-meta and purged on post update.
-= 0.21 = 
-* Temporary fix for slow embed code in preparation for caching to reduce calls. 
+= 0.21 =
+* Temporary fix for slow embed code in preparation for caching to reduce calls.
 * Removed defaultterms check to only run on settings page save or plugin activation instead of on each load.
-= 0.2 = 
-* Forked to Indieweb Post Kinds to reflect a change to act as an alternative to the post formats feature of WordPress. 
-* Removed multikind option. Prior to this, the plugin functions mirrored those of tags. With the removal of multikind support, each post can only have one kind, and the functions will more closely mirror the Post Format. 
+= 0.2 =
+* Forked to Indieweb Post Kinds to reflect a change to act as an alternative to the post formats feature of WordPress.
+* Removed multikind option. Prior to this, the plugin functions mirrored those of tags. With the removal of multikind support, each post can only have one kind, and the functions will more closely mirror the Post Format.
 * Complete rewrite of the display functionality.
 = 0.1.1 =
-* Option to Update Metadata Deliberately Commented Out. 
+* Option to Update Metadata Deliberately Commented Out.
 * Anyone who used the old plugin should backup their database before considering migration. The data should still be in the database regardless.
-= 0.1.0 = 
+= 0.1.0 =
 * Revised settings page to use WordPress Settings API. Alert: This version switches to using an array for storage of response data for future development. To migrate your data, please backup your database and then check Migrate to new data structure on update on the options page.
-= 0.0.6 = 
+= 0.0.6 =
 * Added in support for Favorite
 * fixed webmention support.
-= 0.0.5 = 
-* Set up embed handler for commonly linked sites. 
-* Add options to turn on embeds for these sites. 
+= 0.0.5 =
+* Set up embed handler for commonly linked sites.
+* Add options to turn on embeds for these sites.
 * Plugin is probably now feature complete enough for test deployment to a live site.
 = 0.0.4 =
-* Add function to generate verbs(Like to Liked...) for a given kind. 
-* Add Display functionality in Beta. 
-* Include Genericons and Dashicons for icon options for the various kinds. 
+* Add function to generate verbs(Like to Liked...) for a given kind.
+* Add Display functionality in Beta.
+* Include Genericons and Dashicons for icon options for the various kinds.
 * Add plugin option to add the response URL to the top or bottom of the content section.
 * Plugin near point at which can be deployed for basic use.
-= 0.0.3 = 
-* Location function removed and split into separate plugin called Simple Location. 
+= 0.0.3 =
+* Location function removed and split into separate plugin called Simple Location.
 * Any check-in kind functionality will have this as a dependency.
-= 0.0.2 = 
-* Location meta box with HTML5 geolocation fill-in added. This allows posts to optionally have a location. This is as per the Wordpress Geodata specifications, so the Wordpress Android app will fill them in. There is no display functionality. 
+= 0.0.2 =
+* Location meta box with HTML5 geolocation fill-in added. This allows posts to optionally have a location. This is as per the Wordpress Geodata specifications, so the Wordpress Android app will fill them in. There is no display functionality.
 * Various functions that mimic the built-in functions for other taxonomies were added, including filters to add additional behaviors. Default terms now prepopulate if no terms exist.
-= 0.0.1 = 
+= 0.0.1 =
 * Registers a custom taxonomy
 * adds in code snippets to turn the post meta box from checkboxes to radio buttons
 * adds code to allow a custom permalink tag if needed.
