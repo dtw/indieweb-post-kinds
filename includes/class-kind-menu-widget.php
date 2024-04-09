@@ -28,7 +28,11 @@ class Kind_Menu_Widget extends WP_Widget {
 		/** This filter is documented in wp-includes/widgets/class-wp-widget-pages.php */
 		$title = apply_filters( 'widget_title', $instance['title'], $instance, $this->id_base );
 
-		$include = $instance['termslist'];
+		if ( array_key_exists( 'termslist', $instance ) ) {
+			$include = $instance['termslist'];
+		} else {
+			$include = array();
+		}
 		$include = array_merge( $include, array( 'note', 'reply', 'article' ) );
 		// Filter Kinds
 		$include = array_unique( apply_filters( 'kind_include', $include ) );
@@ -118,7 +122,7 @@ class Kind_Menu_Widget extends WP_Widget {
 				<p><label for="title"><?php esc_html_e( 'Title: ', 'indieweb-post-kinds' ); ?></label>
 				<input type="text" size="30" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?> id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" value="
 		<?php echo esc_html( ( $instance['title'] ?? '' ) ); ?>" /></p>
-		<div id="kind-all"> 
+		<div id="kind-all">
 		<?php
 		foreach ( get_option( 'kind_termslist', Kind_Taxonomy::get_kind_list() ) as $term ) {
 			$value = Kind_Taxonomy::get_post_kind_info( $term );
