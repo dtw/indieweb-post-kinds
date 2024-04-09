@@ -1,20 +1,21 @@
-# Copyright (C) 2023 David Shanske
+# Copyright (C) 2024 David Shanske
 # This file is distributed under the same license as the Post Kinds plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Post Kinds 3.7.1\n"
+"Project-Id-Version: Post Kinds 3.7.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/indieweb-post-kinds\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-12-17T20:04:56+00:00\n"
+"POT-Creation-Date: 2024-04-09T03:10:32+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.9.0\n"
+"X-Generator: WP-CLI 2.10.0\n"
 "X-Domain: indieweb-post-kinds\n"
 
 #. Plugin Name of the plugin
+#: indieweb-post-kinds.php
 #: includes/class-kind-config.php:251
 #: includes/class-kind-config.php:252
 #: includes/class-kind-config.php:258
@@ -22,18 +23,22 @@ msgid "Post Kinds"
 msgstr ""
 
 #. Plugin URI of the plugin
+#: indieweb-post-kinds.php
 msgid "https://wordpress.org/plugins/indieweb-post-kinds/"
 msgstr ""
 
 #. Description of the plugin
+#: indieweb-post-kinds.php
 msgid "Ever want to reply to someone else's post with a post on your own site? Or to \"like\" someone else's post, but with your own site?"
 msgstr ""
 
 #. Author of the plugin
+#: indieweb-post-kinds.php
 msgid "David Shanske"
 msgstr ""
 
 #. Author URI of the plugin
+#: indieweb-post-kinds.php
 msgid "https://david.shanske.com"
 msgstr ""
 
@@ -1173,24 +1178,24 @@ msgid "A widget that allows you to display a menu of kind archives"
 msgstr ""
 
 #. translators: 1. Blog Title 2. Kind Singular Name
-#: includes/class-kind-menu-widget.php:58
+#: includes/class-kind-menu-widget.php:62
 msgid "title=\"%1$s %2$s Feed\""
 msgstr ""
 
-#: includes/class-kind-menu-widget.php:74
+#: includes/class-kind-menu-widget.php:78
 msgid "All Posts"
 msgstr ""
 
-#: includes/class-kind-menu-widget.php:118
+#: includes/class-kind-menu-widget.php:122
 #: includes/class-kind-post-widget.php:95
 msgid "Title: "
 msgstr ""
 
-#: includes/class-kind-menu-widget.php:139
+#: includes/class-kind-menu-widget.php:143
 msgid "Show Link to All:"
 msgstr ""
 
-#: includes/class-kind-menu-widget.php:144
+#: includes/class-kind-menu-widget.php:148
 msgid "Show Count:"
 msgstr ""
 

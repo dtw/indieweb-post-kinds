@@ -1,7 +1,7 @@
 # Post Kinds #
 **Contributors:** [dshanske](https://profiles.wordpress.org/dshanske)  
 **Tags:** indieweb, interaction, posts, webmention, share, like, scrobble  
-**Stable tag:** 3.7.2  
+**Stable tag:** 3.7.3  
 **Requires at least:** 4.9.9  
 **Requires PHP:** 7.0  
 **Tested up to:** 6.5  
