@@ -35,7 +35,7 @@
 			</property>
 		</properties>
 	</rule>
-
+	<rule ref="VariableAnalysis"/>
 	<rule ref="WordPress.WP.DeprecatedFunctions" />
 	<rule ref="WordPress.WP.DeprecatedParameters" />
 	<rule ref="WordPress.WP.AlternativeFunctions" />
