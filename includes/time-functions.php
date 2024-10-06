@@ -3,7 +3,6 @@
  * Time Functions
  *
  * Global Scoped Functions for Handling Time.
- *
  */
 
 if ( ! function_exists( 'tz_seconds_to_offset' ) ) {

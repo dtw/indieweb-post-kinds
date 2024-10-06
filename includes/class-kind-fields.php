@@ -588,7 +588,6 @@ class Kind_Fields {
 
 	/**
 	 * Sets an array with only the mf2 prefixed meta.
-	 *
 	 */
 	private function get_mf2meta( $post ) {
 		$post = get_post();

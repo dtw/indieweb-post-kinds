@@ -243,7 +243,6 @@ class MF2_Post implements ArrayAccess {
 
 	/**
 	 * Sets an array with only the mf2 prefixed meta.
-	 *
 	 */
 	private function get_mf2meta() {
 		$meta = get_post_meta( $this->uid );
@@ -310,7 +309,6 @@ class MF2_Post implements ArrayAccess {
 
 	/**
 	 * Map Properties Based on Post Type
-	 *
 	 */
 	private function get_post_type_properties() {
 		$properties = array_keys( get_object_vars( $this ) );

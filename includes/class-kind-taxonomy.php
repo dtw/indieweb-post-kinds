@@ -69,7 +69,6 @@ final class Kind_Taxonomy {
 	}
 
 	/** Template Redirect
-	 *
 	 */
 	public static function template_include( $template ) {
 		global $wp_query;
